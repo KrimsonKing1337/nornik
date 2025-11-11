@@ -23,3 +23,13 @@ export function scrollToElement(element: HTMLElement, duration = 800) {
 
   requestAnimationFrame(animate);
 }
+
+export function simulateWheel(dir: number) {
+  const event = new WheelEvent('wheel', {
+    deltaY: dir,
+    bubbles: true,
+    cancelable: true,
+  });
+
+  window.dispatchEvent(event);
+}

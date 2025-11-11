@@ -1,3 +1,5 @@
+import { simulateWheel } from 'utils';
+
 import { SlideWrapper } from '../SlideWrapper';
 
 import styles from './Slide1.scss';
@@ -8,13 +10,7 @@ export type Slide1Props = {
 
 export const Slide1 = ({ ref }: Slide1Props) => {
   const buttonDownClickHandler = () => {
-    const event = new WheelEvent('wheel', {
-      deltaY: 1,
-      bubbles: true,
-      cancelable: true,
-    });
-
-    window.dispatchEvent(event);
+    simulateWheel(1);
   };
 
   return (

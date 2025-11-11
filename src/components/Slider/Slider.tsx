@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 
-import { scrollToElement } from 'utils';
+import { scrollToElement, simulateWheel } from 'utils';
 
 import { Slide1, Slide2, Slide3 } from './components';
+
+let touchStartY = 0;
 
 export const Slider = () => {
   const [index, setIndex] = useState(0);
@@ -61,6 +63,25 @@ export const Slider = () => {
     window.addEventListener('keydown', (e: KeyboardEvent) => {
       e.preventDefault();
     });
+
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStartY = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e: TouchEvent) => {
+      const deltaY = e.changedTouches[0].clientY - touchStartY;
+
+      if (Math.abs(deltaY) < 40) {
+        return;
+      }
+
+      const dir = deltaY > 0 ? -1 : 1;
+
+      simulateWheel(dir);
+    };
+
+    window.addEventListener('touchstart', handleTouchStart, { passive: false });
+    window.addEventListener('touchend', handleTouchEnd, { passive: false });
   }, []);
 
   return (

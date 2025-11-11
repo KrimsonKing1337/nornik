@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 
 import * as THREE from 'three';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Environment, useGLTF, Bounds } from '@react-three/drei';
+import { OrbitControls, Environment, useGLTF } from '@react-three/drei';
 
 import classNames from 'classnames';
 
@@ -59,11 +59,7 @@ export const Logo = ({ className = '' }: LogoProps) => {
         <ambientLight intensity={0.6} />
 
         <Environment preset="sunset" />
-
-        <Bounds fit clip observe>
-          <Model />
-        </Bounds>
-
+        <Model />
         <OrbitControls enableZoom={false} />
       </Canvas>
     </div>

@@ -5,17 +5,18 @@ import classNames from 'classnames';
 import styles from './SlideWrapper.scss';
 
 export type SlideWrapperProps = PropsWithChildren & {
+  id?: string;
   className?: string;
 };
 
-export const SlideWrapper = ({ children, className = '' }: SlideWrapperProps) => {
+export const SlideWrapper = ({ children, id = '', className = '' }: SlideWrapperProps) => {
   const wrapperClassNames = classNames({
     [styles.Wrapper]: true,
     [className]: !!className,
   });
 
   return (
-    <div className={wrapperClassNames}>
+    <div id={id} className={wrapperClassNames}>
       {children}
     </div>
   );

@@ -1,5 +1,7 @@
 import classNames from 'classnames';
 
+import { Logo } from 'components';
+
 import { simulateWheel } from 'utils';
 
 import { SlideWrapper } from '../SlideWrapper';
@@ -23,6 +25,8 @@ export const Slide1 = ({ ref, isActive = false }: Slide1Props) => {
 
   return (
     <SlideWrapper ref={ref} id="slide1" className={slideClassNames}>
+      <Logo className={styles.Logo} />
+
       Почему я нужен команде (почему frontend-разработчик нужен команде)?
 
       <div className={styles.ButtonDown} onClick={buttonDownClickHandler} />

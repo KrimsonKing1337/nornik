@@ -50,6 +50,7 @@ export const App = () => {
         <Bounds fit clip observe>
           <Model />
         </Bounds>
+
         <OrbitControls enableZoom={false} />
       </Canvas>
     </div>

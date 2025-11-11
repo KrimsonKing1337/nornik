@@ -2,22 +2,22 @@ import classNames from 'classnames';
 
 import { SlideWrapper } from '../SlideWrapper';
 
-import styles from './Slide2.scss';
+import styles from './Slide4.scss';
 
-export type Slide2Props = {
+export type Slide4Props = {
   ref: React.Ref<HTMLDivElement>;
   isActive?: boolean;
 };
 
-export const Slide2 = ({ ref, isActive }: Slide2Props) => {
+export const Slide4 = ({ ref, isActive }: Slide4Props) => {
   const slideClassNames = classNames({
     [styles.Wrapper]: true,
     'isActive': isActive,
   });
 
   return (
-    <SlideWrapper ref={ref} id="slide2" className={slideClassNames}>
-      Slide 2
+    <SlideWrapper ref={ref} id="slide3" className={slideClassNames}>
+      Slide 4
     </SlideWrapper>
   );
 };

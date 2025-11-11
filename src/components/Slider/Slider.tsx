@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import { scrollToElement, simulateWheel } from 'utils';
 
-import { Slide1, Slide2, Slide3 } from './components';
+import { Slide1, Slide2, Slide3, Slide4 } from './components';
 
 let touchStartY = 0;
 
@@ -86,9 +86,10 @@ export const Slider = () => {
 
   return (
     <div>
-      <Slide1 ref={(el: HTMLDivElement) => setSectionRef(el, 0)} />
-      <Slide2 ref={(el: HTMLDivElement) => setSectionRef(el, 1)} />
-      <Slide3 ref={(el: HTMLDivElement) => setSectionRef(el, 2)} />
+      <Slide1 ref={(el: HTMLDivElement) => setSectionRef(el, 0)} isActive={index === 0} />
+      <Slide2 ref={(el: HTMLDivElement) => setSectionRef(el, 1)} isActive={index === 1} />
+      <Slide3 ref={(el: HTMLDivElement) => setSectionRef(el, 2)} isActive={index === 2} />
+      <Slide4 ref={(el: HTMLDivElement) => setSectionRef(el, 3)} isActive={index === 3} />
     </div>
   );
 };

@@ -4,6 +4,8 @@ import * as THREE from 'three';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Environment, useGLTF, Bounds } from '@react-three/drei';
 
+import classNames from 'classnames';
+
 import LogoModel from 'assets/logo.glb';
 
 import styles from './Logo.scss';
@@ -41,9 +43,18 @@ const Model = () => {
   );
 };
 
-export const Logo = () => {
+export type LogoProps = {
+  className?: string;
+};
+
+export const Logo = ({ className = '' }: LogoProps) => {
+  const logoClassNames = classNames({
+    [styles.Wrapper]: true,
+    [className]: !!className,
+  });
+
   return (
-    <div className={styles.Wrapper}>
+    <div className={logoClassNames}>
       <Canvas camera={{ position: [0, 1, 3] }}>
         <ambientLight intensity={0.6} />
 

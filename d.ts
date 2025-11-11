@@ -7,3 +7,4 @@ declare module '*.scss' {
 
 declare module '*.glb';
 declare module '*.svg';
+declare module '*.jpg';

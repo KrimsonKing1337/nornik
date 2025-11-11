@@ -66,7 +66,7 @@ export default (env = {}, argv) => {
       ],
     },
     {
-      test: /\.(jpeg|jpg|png|docx)$/i,
+      test: /\.(jpeg|png|docx)$/i,
       use: [
         {
           loader: 'url-loader',
@@ -81,7 +81,7 @@ export default (env = {}, argv) => {
       use: ['url-loader?limit=100000'],
     },
     {
-      test: /\.(glb|gltf|svg|ttf)$/,
+      test: /\.(glb|gltf|svg|ttf|jpg)$/,
       type: 'asset/resource',
     },
   ];

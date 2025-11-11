@@ -1,5 +1,9 @@
 import classNames from 'classnames';
 
+import { ArrowButton } from 'components';
+
+import { simulateWheel } from 'utils';
+
 import { SlideWrapper } from '../SlideWrapper';
 
 import styles from './Slide2.scss';
@@ -10,6 +14,10 @@ export type Slide2Props = {
 };
 
 export const Slide2 = ({ ref, isActive }: Slide2Props) => {
+  const arrowButtonClickHandler = () => {
+    simulateWheel(1);
+  };
+
   const slideClassNames = classNames({
     [styles.Wrapper]: true,
     [styles.isActive]: isActive,
@@ -25,6 +33,8 @@ export const Slide2 = ({ ref, isActive }: Slide2Props) => {
       <div className={textClassNames}>
         Slide 2
       </div>
+
+      <ArrowButton onClick={arrowButtonClickHandler} />
     </SlideWrapper>
   );
 };

@@ -6,6 +6,9 @@ import { store } from 'store';
 
 import { App } from './components';
 
+import 'reset-css';
+import 'styles/common.scss';
+
 const root = createRoot(document.getElementById('root') as HTMLDivElement);
 
 root.render(

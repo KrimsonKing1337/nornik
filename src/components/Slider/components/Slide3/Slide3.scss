@@ -1,0 +1,15 @@
+.Wrapper {
+  position: relative;
+  background: green;
+  color: #fff;
+  font-size: 48px;
+}
+
+.ButtonDown {
+  position: absolute;
+  z-index: 1;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}

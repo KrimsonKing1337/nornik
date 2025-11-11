@@ -1,22 +1,21 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren, HTMLAttributes } from 'react';
 
 import classNames from 'classnames';
 
 import styles from './SlideWrapper.scss';
 
-export type SlideWrapperProps = PropsWithChildren & {
-  id?: string;
-  className?: string;
+export type SlideWrapperProps = PropsWithChildren & HTMLAttributes<HTMLDivElement> & {
+  ref?: React.Ref<HTMLDivElement>;
 };
 
-export const SlideWrapper = ({ children, id = '', className = '' }: SlideWrapperProps) => {
+export const SlideWrapper = ({ ref, children, id = '', className = '' }: SlideWrapperProps) => {
   const wrapperClassNames = classNames({
     [styles.Wrapper]: true,
     [className]: !!className,
   });
 
   return (
-    <div id={id} className={wrapperClassNames}>
+    <div ref={ref} id={id} className={wrapperClassNames}>
       {children}
     </div>
   );

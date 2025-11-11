@@ -1,3 +1,4 @@
+export * from './SlideWrapper';
 export * from './Slide1';
 export * from './Slide2';
-export * from './SlideWrapper';
+export * from './Slide3';

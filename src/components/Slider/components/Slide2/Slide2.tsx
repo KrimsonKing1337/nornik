@@ -12,12 +12,19 @@ export type Slide2Props = {
 export const Slide2 = ({ ref, isActive }: Slide2Props) => {
   const slideClassNames = classNames({
     [styles.Wrapper]: true,
-    'isActive': isActive,
+    [styles.isActive]: isActive,
+  });
+
+  const textClassNames = classNames({
+    [styles.Text]: true,
+    [styles.isActive]: isActive,
   });
 
   return (
     <SlideWrapper ref={ref} id="slide2" className={slideClassNames}>
-      Slide 2
+      <div className={textClassNames}>
+        Slide 2
+      </div>
     </SlideWrapper>
   );
 };

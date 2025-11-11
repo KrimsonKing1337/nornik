@@ -1,0 +1,17 @@
+.Wrapper {
+  position: absolute;
+  z-index: 1;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 75px;
+  height: 75px;
+  transform: rotate(90deg);
+  transition: bottom 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    bottom: 60px;
+  }
+}

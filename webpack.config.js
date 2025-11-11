@@ -77,13 +77,13 @@ export default (env = {}, argv) => {
       ],
     },
     {
-      test: /\.(woff|woff2|eot|ttf|otf)$/,
+      test: /\.(woff|woff2|eot|otf)$/,
       use: ['url-loader?limit=100000'],
     },
     {
-      test: /\.(glb|gltf)$/,
+      test: /\.(glb|gltf|svg|ttf)$/,
       type: 'asset/resource',
-    }
+    },
   ];
 
   const buildDir = path.join(__dirname, 'dist');

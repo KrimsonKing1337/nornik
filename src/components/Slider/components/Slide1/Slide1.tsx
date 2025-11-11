@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import { Logo } from 'components';
+import { ArrowButton, Logo } from 'components';
 
 import { simulateWheel } from 'utils';
 
@@ -14,7 +14,7 @@ export type Slide1Props = {
 };
 
 export const Slide1 = ({ ref, isActive = false }: Slide1Props) => {
-  const buttonDownClickHandler = () => {
+  const arrowButtonClickHandler = () => {
     simulateWheel(1);
   };
 
@@ -27,9 +27,9 @@ export const Slide1 = ({ ref, isActive = false }: Slide1Props) => {
     <SlideWrapper ref={ref} id="slide1" className={slideClassNames}>
       <Logo className={styles.Logo} />
 
-      Почему я нужен команде (почему frontend-разработчик нужен команде)?
+      Размышления о сокращении
 
-      <div className={styles.ButtonDown} onClick={buttonDownClickHandler} />
+      <ArrowButton onClick={arrowButtonClickHandler} />
     </SlideWrapper>
   );
 };

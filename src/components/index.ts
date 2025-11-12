@@ -4,3 +4,4 @@ export * from './App';
 export * from './Logo';
 export * from './Slider';
 export * from './ArrowButton';
+export * from './Modal';

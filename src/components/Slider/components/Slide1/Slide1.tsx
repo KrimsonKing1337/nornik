@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import { ArrowButton, Logo } from 'components';
+import { ArrowButton, Logo, Modal } from 'components';
 
 import { simulateWheel } from 'utils';
 
@@ -25,6 +25,10 @@ export const Slide1 = ({ ref, isActive = false }: Slide1Props) => {
 
   return (
     <SlideWrapper ref={ref} id="slide1" className={slideClassNames}>
+      <Modal>
+        Модалка
+      </Modal>
+
       <Logo className={styles.Logo} />
 
       Без FE-разработчика

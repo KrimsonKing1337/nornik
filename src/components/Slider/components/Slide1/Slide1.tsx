@@ -27,7 +27,9 @@ export const Slide1 = ({ ref, isActive = false }: Slide1Props) => {
     <SlideWrapper ref={ref} id="slide1" className={slideClassNames}>
       <Logo className={styles.Logo} />
 
-      Размышления о сокращении
+      Без FE-разработчика
+      <br />
+      не очень-то
 
       <ArrowButton onClick={arrowButtonClickHandler} />
     </SlideWrapper>

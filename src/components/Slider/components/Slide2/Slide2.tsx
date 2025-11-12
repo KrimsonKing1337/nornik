@@ -25,6 +25,11 @@ export const Slide2 = ({ ref, isActive }: Slide2Props) => {
     [styles.isActive]: isActive,
   });
 
+  const imgClassNames = classNames({
+    [styles.Img]: true,
+    [styles.isActive]: isActive,
+  });
+
   const textWrapperClassNames = classNames({
     [styles.TextWrapper]: true,
     [styles.isActive]: isActive,
@@ -32,7 +37,7 @@ export const Slide2 = ({ ref, isActive }: Slide2Props) => {
 
   return (
     <SlideWrapper ref={ref} id="slide2" className={slideClassNames}>
-      <img src={imageGoals} alt="" className={styles.Img} />
+      <img src={imageGoals} alt="" className={imgClassNames} />
 
       <div className={textWrapperClassNames}>
         <div className={styles.Text}>

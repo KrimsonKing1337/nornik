@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import imageGoals from 'assets/goals.jpg';
+import riskImage from 'assets/risk.jpg';
 
 import { ArrowButton } from 'components';
 
@@ -37,15 +37,16 @@ export const Slide2 = ({ ref, isActive }: Slide2Props) => {
 
   return (
     <SlideWrapper ref={ref} id="slide2" className={slideClassNames}>
-      <img src={imageGoals} alt="" className={imgClassNames} />
+      <img src={riskImage} alt="" className={imgClassNames} />
 
       <div className={textWrapperClassNames}>
         <div className={styles.Text}>
-          Почему меня стоит сохранить в команде
+          Риски и последствия
           <br />
-          Итоги, эффект для бизнеса и 90-дневный план
+          при отсутствии FE-разработчика
           <br />
-          Олег - Frontend-разработчик / архитектор
+          <br />
+          Олег Шилов
           <br />
           Ноябрь 2025
         </div>

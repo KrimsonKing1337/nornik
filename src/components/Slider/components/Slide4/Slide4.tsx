@@ -30,19 +30,22 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
     [styles.isActive]: isActive,
   });
 
+  const titleClassNames = classNames({
+    [styles.Title]: true,
+    [styles.isActive]: isActive,
+  });
+
   const tableWrapperClassNames = classNames({
     [styles.TableWrapper]: true,
-    'isActive': isActive,
+    [styles.isActive]: isActive,
   });
 
   return (
-    <SlideWrapper ref={ref} id="slide3" className={slideClassNames}>
+    <SlideWrapper ref={ref} id="slide4" className={slideClassNames}>
       <img src={curveImage} alt="" className={imgClassNames} />
 
-      <div>
-        Затраты в первый год.
-        <br />
-        Заменим FE двумя BE.
+      <div className={titleClassNames}>
+        Затраты в первый год
       </div>
 
       <div className={tableWrapperClassNames}>

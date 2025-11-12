@@ -49,7 +49,7 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
       </div>
 
       <div className={textClassNames}>
-        Улучшение UI/UX экономит сотруднику 10 минут в день
+        Улучшение UI/UX экономит сотруднику 10 минут в день.
         <br />
         4 000 сотрудников x 10 мин x 12 мес = <b>90 млн ₽</b> в год
         <br />

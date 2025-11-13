@@ -1,8 +1,10 @@
+import { useState } from 'react';
+
 import classNames from 'classnames';
 
 import curveImage from 'assets/curve_red_axes_transparent.png';
 
-import { ArrowButton } from 'components';
+import { ArrowButton, Modal } from 'components';
 
 import { simulateWheel } from 'utils';
 
@@ -16,6 +18,8 @@ export type Slide3Props = {
 };
 
 export const Slide3 = ({ ref, isActive }: Slide3Props) => {
+  const [modalIsActive, setModalIsActive] = useState(false);
+
   const arrowButtonClickHandler = () => {
     simulateWheel(1);
   };
@@ -42,9 +46,13 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
 
   return (
     <SlideWrapper ref={ref} id="slide3" className={slideClassNames}>
+      <Modal isActive={modalIsActive} setIsActive={setModalIsActive}>
+        Модалка слайд 3
+      </Modal>
+
       <img src={curveImage} alt="" className={imgClassNames} />
 
-      <div className={titleClassNames}>
+      <div className={titleClassNames} onClick={() => setModalIsActive(true)}>
         Хороший UI/UX
       </div>
 

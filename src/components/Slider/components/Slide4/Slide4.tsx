@@ -1,8 +1,10 @@
+import { useState } from 'react';
+
 import classNames from 'classnames';
 
 import curveImage from 'assets/curve_red_axes_downward_transparent.png';
 
-import { ArrowButton } from 'components';
+import { ArrowButton, Modal } from 'components';
 
 import { simulateWheel } from 'utils';
 
@@ -16,6 +18,8 @@ export type Slide4Props = {
 };
 
 export const Slide4 = ({ ref, isActive }: Slide4Props) => {
+  const [modalIsActive, setModalIsActive] = useState(false);
+
   const arrowButtonClickHandler = () => {
     simulateWheel(1);
   };
@@ -42,6 +46,10 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
 
   return (
     <SlideWrapper ref={ref} id="slide4" className={slideClassNames}>
+      <Modal isActive={modalIsActive} setIsActive={setModalIsActive}>
+        Модалка слайд 4
+      </Modal>
+
       <img src={curveImage} alt="" className={imgClassNames} />
 
       <div className={titleClassNames}>

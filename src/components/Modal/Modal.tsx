@@ -4,6 +4,8 @@ import { createPortal } from 'react-dom';
 
 import classNames from 'classnames';
 
+import crossIcon from 'assets/i-cross.svg';
+
 import styles from './Modal.scss';
 
 export type ModalProps = PropsWithChildren & {
@@ -26,8 +28,8 @@ export const Modal = ({
 
   return createPortal(
     <div className={wrapperClassNames}>
-      <div onClick={() => {setIsActive(false);}}>
-        x
+      <div className={styles.CloseButtonWrapper} onClick={() => {setIsActive(false);}}>
+        <img src={crossIcon} alt="" />
       </div>
 
       <div>
@@ -37,5 +39,3 @@ export const Modal = ({
     document.body,
   );
 };
-
-// todo: крестик

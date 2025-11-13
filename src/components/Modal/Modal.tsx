@@ -24,6 +24,10 @@ export const Modal = ({
     e.stopPropagation();
   };
 
+  const modalWheelHandler = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
+
   const wrapperClassNames = classNames({
     [styles.ExtraWrapper]: true,
     [styles.isActive]: isActive,
@@ -31,15 +35,15 @@ export const Modal = ({
   });
 
   return createPortal(
-    <div className={wrapperClassNames} onClick={() => {setIsActive(false);}}>
+    <div className={wrapperClassNames} onClick={() => {setIsActive(false);}} onWheel={modalWheelHandler}>
       <div className={styles.Wrapper} onClick={contentClickHandler}>
         <div className={styles.CloseButtonWrapper} onClick={() => {setIsActive(false);}}>
           <img src={crossIcon} alt="" />
         </div>
 
-        <div>
+        <>
           {children}
-        </div>
+        </>
       </div>
     </div>,
     document.body,

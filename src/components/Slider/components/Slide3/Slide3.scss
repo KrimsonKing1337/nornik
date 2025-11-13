@@ -61,3 +61,42 @@
     transform: rotateY(0deg);
   }
 }
+
+.MoreDetails {
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  right: 50px;
+  font-size: 48px;
+  color: #fff;
+  background: rgb(84, 63, 255);
+  padding: 10px;
+  border: 4px #fff solid;
+  border-radius: 10px;
+  transition: border-color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    border-color: rgb(84, 63, 255);
+    background-color: transparent;
+  }
+}
+
+.ModalContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 34px;
+  padding: 50px;
+  color: #fff;
+}
+
+.ModalContentLine {
+  margin-top: 15px;
+  border-bottom: 1px grey solid;
+  padding-bottom: 5px;
+
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+}

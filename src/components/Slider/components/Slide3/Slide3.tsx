@@ -61,39 +61,39 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
         <div className={styles.ModalContent}>
           <div>
             <div className={styles.ModalContentLine}>
-              Активных пользователей КАСУД: 4000
+              <b>Активных пользователей КАСУД:</b> 4000
             </div>
 
             <div className={styles.ModalContentLine}>
-              Средняя зарплата: 50 тысяч рублей
+              <b>Средняя зарплата:</b> 50 тысяч рублей
             </div>
 
             <div className={styles.ModalContentLine}>
-              Стоимость 1 минуты простоя сотрудника:
+              <b>Стоимость 1 минуты простоя сотрудника:</b>
               <br />
               156,25 ₽ / 30 мин = 5,21 ₽/мин
             </div>
 
             <div className={styles.ModalContentLine}>
-              Простой в месяц:
+              <b>Простой в месяц:</b>
               <br />
               280 мин × 5,21 ₽ = 1 458,8 ₽/сотрудника в месяц
             </div>
 
             <div className={styles.ModalContentLine}>
-              Количество сотрудников:
+              <b>Количество сотрудников:</b>
               <br />
               1 458,8 ₽ × 4 000 = 5 835 200 ₽/мес
             </div>
 
             <div className={styles.ModalContentLine}>
-              За год:
+              <b>За год:</b>
               <br />
               5 835 200 ₽ × 12 = 70 022 400 ₽/год
             </div>
 
             <div className={styles.ModalContentLine}>
-              Включая налоги (≈ 30%):
+              <b>Включая налоги (≈ 30%):</b>
               <br />
               90 988 800 ₽/год
             </div>

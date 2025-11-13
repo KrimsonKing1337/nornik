@@ -20,8 +20,12 @@ export type Slide4Props = {
 export const Slide4 = ({ ref, isActive }: Slide4Props) => {
   const [modalIsActive, setModalIsActive] = useState(false);
 
-  const arrowButtonClickHandler = () => {
+  const nextArrowButtonClickHandler = () => {
     simulateWheel(1);
+  };
+
+  const prevArrowButtonClickHandler = () => {
+    simulateWheel(-1);
   };
 
   const slideClassNames = classNames({
@@ -44,107 +48,175 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
     [styles.isActive]: isActive,
   });
 
+  const calculationsClassNames = classNames({
+    [styles.Calculations]: true,
+    [styles.isActive]: isActive,
+  });
+
+  const textClassNames = classNames({
+    [styles.Text]: true,
+    [styles.isActive]: isActive,
+  });
+
   return (
     <SlideWrapper ref={ref} id="slide4" className={slideClassNames}>
       <Modal isActive={modalIsActive} setIsActive={setModalIsActive}>
-        Модалка слайд 4
+        <div className={styles.ModalContentWrapper}>
+          <div className={styles.ModalContent}>
+            <div className={styles.ModalContentSubTitle}>
+              Исходные данные:
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              2 Backend-разработчика
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              Зарплата каждого: 250 000 ₽/мес
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              Вместе: 500 000 ₽/мес
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              +30% взносы и налоги = 650 000 ₽/мес
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              За год: 650 000 × 12 = 7 800 000 ₽
+            </div>
+
+            <div className={styles.ModalContentSubTitle}>
+              Потери эффективности:
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              Без профильных знаний во фронтенде (React, Redux, webpack и т.д.)
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              3–4 месяца (в лучшем случае) — обучение, ошибки, медленная скорость: ~2 млн ₽ вхолостую
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              оставшиеся месяцы — низкая производительность (в 2–3 раза ниже): ещё 2–3 млн ₽ потерь
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              итоговая стоимость при переписывании кода через год: ещё +3–5 млн ₽
+            </div>
+          </div>
+        </div>
       </Modal>
+
+      <div className={calculationsClassNames} onClick={() => setModalIsActive(true)}>
+        Подробнее
+      </div>
 
       <img src={curveImage} alt="" className={imgClassNames} />
 
-      <div className={titleClassNames}>
-        Затраты в первый год
-      </div>
+      <div className={styles.Content}>
+        <div className={titleClassNames}>
+          Замена на двух BE
+        </div>
 
-      <div className={tableWrapperClassNames}>
-        <table>
-          <thead>
-            <tr>
-              <th>
+        <div className={tableWrapperClassNames}>
+          <table>
+            <thead>
+              <tr>
+                <th>
                 Компонент
-              </th>
+                </th>
 
-              <th>
+                <th>
                 Потери
-              </th>
-            </tr>
-          </thead>
+                </th>
+              </tr>
+            </thead>
 
-          <tbody>
-            <tr>
-              <td>
+            <tbody>
+              <tr>
+                <td>
                 &nbsp;
-              </td>
+                </td>
 
-              <td>
+                <td>
                 &nbsp;
-              </td>
-            </tr>
+                </td>
+              </tr>
 
-            <tr>
-              <td>
+              <tr>
+                <td>
                 Зарплаты и налоги
-              </td>
+                </td>
 
-              <td>
+                <td>
                 7 800 000
-              </td>
-            </tr>
+                </td>
+              </tr>
 
-            <tr>
-              <td>
+              <tr>
+                <td>
                 Обучение и ошибки
-              </td>
+                </td>
 
-              <td>
+                <td>
                 2 000 000
-              </td>
-            </tr>
+                </td>
+              </tr>
 
-            <tr>
-              <td>
+              <tr>
+                <td>
                 Низкая эффективность
-              </td>
+                </td>
 
-              <td>
+                <td>
                 2 500 000
-              </td>
-            </tr>
+                </td>
+              </tr>
 
-            <tr>
-              <td>
+              <tr>
+                <td>
                 Техдолг и переписывание
-              </td>
+                </td>
 
-              <td>
+                <td>
                 4 000 000
-              </td>
-            </tr>
+                </td>
+              </tr>
 
-            <tr>
-              <td>
+              <tr>
+                <td>
                 &nbsp;
-              </td>
+                </td>
 
-              <td>
+                <td>
                 &nbsp;
-              </td>
-            </tr>
+                </td>
+              </tr>
 
-            <tr>
-              <td>
+              <tr>
+                <td>
                 Совокупные потери за год
-              </td>
+                </td>
 
-              <td>
+                <td>
                 ≈16 млн ₽
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className={textClassNames}>
+          Компания потратит в 4–5 раз больше, чем стоит экспертиза FE-разработчика.
+          И при этом получит хуже результат и долгосрочный убыток.
+        </div>
       </div>
 
-      <ArrowButton onClick={arrowButtonClickHandler} />
+      <ArrowButton isPrev onClick={prevArrowButtonClickHandler} />
+      <ArrowButton onClick={nextArrowButtonClickHandler} />
     </SlideWrapper>
   );
 };

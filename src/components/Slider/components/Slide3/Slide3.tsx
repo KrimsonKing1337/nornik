@@ -21,7 +21,11 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
   const [modalDetailsIsActive, setModalDetailsIsActive] = useState(false);
   const [modalDesignIsActive, setModalDesignIsActive] = useState(false);
 
-  const arrowButtonClickHandler = () => {
+  const prevArrowButtonClickHandler = () => {
+    simulateWheel(-1);
+  };
+
+  const nextArrowButtonClickHandler = () => {
     simulateWheel(1);
   };
 
@@ -133,7 +137,7 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
               </div>
 
               <div className={styles.ModalContentLine}>
-                Плохой UX → ошибки при вводе данных, пропуски, дублирование.
+                Плохой UX = ошибки при вводе данных, пропуски, дублирование.
               </div>
 
               <div className={styles.ModalContentLine}>
@@ -225,7 +229,8 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
         Плохой дизайн — это не просто "не красиво", это большие потери для компании
       </div>
 
-      <ArrowButton onClick={arrowButtonClickHandler} />
+      <ArrowButton isPrev onClick={prevArrowButtonClickHandler} />
+      <ArrowButton onClick={nextArrowButtonClickHandler} />
     </SlideWrapper>
   );
 };

@@ -16,8 +16,12 @@ export type Slide2Props = {
 };
 
 export const Slide2 = ({ ref, isActive }: Slide2Props) => {
-  const arrowButtonClickHandler = () => {
+  const nextArrowButtonClickHandler = () => {
     simulateWheel(1);
+  };
+
+  const prevArrowButtonClickHandler = () => {
+    simulateWheel(-1);
   };
 
   const slideClassNames = classNames({
@@ -52,7 +56,8 @@ export const Slide2 = ({ ref, isActive }: Slide2Props) => {
         </div>
       </div>
 
-      <ArrowButton onClick={arrowButtonClickHandler} />
+      <ArrowButton isPrev onClick={prevArrowButtonClickHandler} />
+      <ArrowButton onClick={nextArrowButtonClickHandler} />
     </SlideWrapper>
   );
 };

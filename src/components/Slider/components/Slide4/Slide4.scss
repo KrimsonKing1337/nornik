@@ -13,6 +13,12 @@
   margin: auto;
 }
 
+.Content {
+  position: relative;
+  width: 55%;
+  height: 100%;
+}
+
 .Title {
   position: absolute;
   z-index: 2;
@@ -32,14 +38,18 @@
   position: absolute;
   z-index: 2;
   bottom: -100%;
-  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 32px;
   color: #fff;
   margin-top: 25px;
-  transform: translateY(50%);
+  transform: translateY(60%);
   transition: bottom 1s ease-in-out;
 
   &.isActive {
-    bottom: 50%;
+    bottom: 60%;
   }
 
   td,
@@ -72,5 +82,89 @@
 
   &.isActive {
     transform: rotateY(0deg);
+  }
+}
+
+.Calculations {
+  position: absolute;
+  z-index: 2;
+  left: -200%;
+  bottom: 50px;
+  font-size: 48px;
+  color: #fff;
+  background: #2A2E7B;
+  padding: 10px;
+  border: 4px #fff solid;
+  border-radius: 10px;
+  transition: left 1s ease-in-out,
+  border-color 0.5s ease-in-out,
+  background-color 0.5s ease-in-out;
+  transform: translateX(calc(-100% - 50px));
+  cursor: pointer;
+
+  &:hover {
+    border-color: #2A2E7B;
+    background-color: transparent;
+  }
+
+  &.isActive {
+    left: 100%;
+  }
+}
+
+.ModalContentWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.ModalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 24px;
+  padding: 50px;
+  width: 50%;
+  color: #fff;
+}
+
+.ModalContentLine {
+  margin-top: 15px;
+  border-bottom: 1px grey solid;
+  padding-bottom: 5px;
+  line-height: 1.5;
+
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+}
+
+.ModalContentTitle {
+  font-size: 51px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.ModalContentSubTitle {
+  font-size: 42px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.Text {
+  position: absolute;
+  z-index: 1;
+  bottom: 20%;
+  right: -200%;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #fff;
+  width: 100%;
+  transform: translateX(50%);
+  transition: right 1s ease-in-out;
+
+  &.isActive {
+    right: 50%;
   }
 }

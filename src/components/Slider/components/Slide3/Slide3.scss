@@ -1,6 +1,7 @@
 .Wrapper {
   position: relative;
   background-image: linear-gradient(128deg, rgb(252, 64, 255), rgb(84, 63, 255));
+  overflow: hidden;
 }
 
 .ButtonDown {
@@ -32,6 +33,7 @@
   position: absolute;
   z-index: 2;
   right: -100%;
+  width: 40%;
   font-size: 24px;
   line-height: 1.25;
   color: #fff;
@@ -60,10 +62,9 @@
 
 .MoreDetails,
 .AboutDesign {
-  opacity: 0;
   position: absolute;
   z-index: 2;
-  top: 50px;
+  top: -200%;
   right: 50px;
   font-size: 48px;
   color: #fff;
@@ -71,7 +72,10 @@
   padding: 10px;
   border: 4px #fff solid;
   border-radius: 10px;
-  transition: opacity 1s 0.75s ease-in-out, border-color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  transition: top 1s ease-in-out,
+  bottom 1s ease-in-out,
+  border-color 0.5s ease-in-out,
+  background-color 0.5s ease-in-out;
   cursor: pointer;
 
   &:hover {
@@ -80,15 +84,20 @@
   }
 
   &.isActive {
-    opacity: 1;
+    top: 50px;
   }
 }
 
 .AboutDesign {
   top: unset;
   right: unset;
-  bottom: 50px;
+  bottom: -200%;
   left: 50px;
+
+  &.isActive {
+    top: unset;
+    bottom: 50px;
+  }
 }
 
 .ModalContentWrapper {

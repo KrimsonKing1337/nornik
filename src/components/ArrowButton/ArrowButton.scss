@@ -14,4 +14,16 @@
   &:hover {
     bottom: 60px;
   }
+
+  &.isPrev {
+    bottom: unset;
+    top: 50px;
+    transform: rotate(270deg);
+    transition: top 0.3s ease-in-out;
+
+    &:hover {
+      bottom: unset;
+      top: 40px;
+    }
+  }
 }

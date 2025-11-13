@@ -124,6 +124,70 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
               <br />
               При 4 000 сотрудниках это <b>~21 млн рублей</b> в год экономии.
             </div>
+
+            <div className={styles.ModalContentSubTitle}>
+              Снижение ошибок и затрат на исправление
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              Плохой UX → ошибки при вводе данных, пропуски, дублирование.
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              Каждая ошибка требует времени на исправление, иногда вовлекает другие отделы.
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              Хороший UX (чёткая структура, валидация, понятные статусы) снижает количество ошибок в разы,
+              уменьшая расходы на повторные действия и техподдержку.
+            </div>
+
+            <div className={styles.ModalContentSubTitle}>
+              Меньше обращений в поддержку и обучение
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              Когда интерфейс интуитивный, падает нагрузка на линию поддержки.
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              Не нужно тратить часы на обучение новым сотрудникам:
+              хороший UX = обучение через использование.
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              По опыту крупных компаний,
+              внедрение современного UI снижает количество тикетов на 20–40%,
+              что может означать десятки человеко-месяцев экономии в год.
+            </div>
+
+            <div className={styles.ModalContentSubTitle}>
+              Повышение вовлечённости и удовлетворённости
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              Люди чаще и охотнее пользуются системой, где всё работает плавно и понятно
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              Это повышает производительность, снижает саботаж
+              и "теневые" обходные пути (Excel, личные чаты и т.п.),
+              которые создают хаос в данных и потери контроля.
+            </div>
+
+            <div className={styles.ModalContentSubTitle}>
+              Ускорение внедрения изменений
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              Когда интерфейс унифицирован и логичен,
+              внедрять новые функции можно быстрее - меньше тестирования
+              и меньше шансов "сломать" привычные сценарии.
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              Это напрямую снижает затраты на разработку и сопровождение.
+            </div>
           </div>
         </div>
       </Modal>

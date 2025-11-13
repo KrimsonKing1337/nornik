@@ -91,12 +91,19 @@
   left: 50px;
 }
 
+.ModalContentWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .ModalContent {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   font-size: 24px;
   padding: 50px;
+  width: 50%;
   color: #fff;
 }
 

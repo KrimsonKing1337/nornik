@@ -102,7 +102,30 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
       </Modal>
 
       <Modal isActive={modalDesignIsActive} setIsActive={setModalDesignIsActive}>
-        О дизайне
+        <div className={styles.ModalContent}>
+          <div>
+            <div className={styles.ModalContentTitle}>
+              Почему хороший дизайн важен?
+            </div>
+
+            <div className={styles.ModalContentSubTitle}>
+              Меньше потерь времени сотрудников
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              Каждый лишний клик, поиск кнопки или непонятная форма
+              — это потерянные секунды, которые на масштабе превращаются
+              в часы и миллионы рублей.
+            </div>
+
+            <div className={styles.ModalContentLine}>
+              Пример: если улучшение интерфейса экономит 5 секунд на задаче,
+              а сотрудник делает таких задач 100 в день, то это уже 8 минут экономии в день.
+              <br />
+              При 4 000 сотрудниках это <b>~21 млн рублей</b> в год экономии.
+            </div>
+          </div>
+        </div>
       </Modal>
 
       <div className={moreDetailsClassNames} onClick={() => setModalDetailsIsActive(true)}>

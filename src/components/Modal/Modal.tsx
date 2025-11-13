@@ -20,20 +20,26 @@ export const Modal = ({
   setIsActive = () => {},
   className = '',
 }: ModalProps) => {
+  const contentClickHandler = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
+
   const wrapperClassNames = classNames({
-    [styles.Wrapper]: true,
+    [styles.ExtraWrapper]: true,
     [styles.isActive]: isActive,
     [className]: !!className,
   });
 
   return createPortal(
-    <div className={wrapperClassNames}>
-      <div className={styles.CloseButtonWrapper} onClick={() => {setIsActive(false);}}>
-        <img src={crossIcon} alt="" />
-      </div>
+    <div className={wrapperClassNames} onClick={() => {setIsActive(false);}}>
+      <div className={styles.Wrapper} onClick={contentClickHandler}>
+        <div className={styles.CloseButtonWrapper} onClick={() => {setIsActive(false);}}>
+          <img src={crossIcon} alt="" />
+        </div>
 
-      <div>
-        {children}
+        <div>
+          {children}
+        </div>
       </div>
     </div>,
     document.body,

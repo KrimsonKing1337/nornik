@@ -62,7 +62,9 @@
   }
 }
 
-.MoreDetails {
+.MoreDetails,
+.AboutDesign {
+  opacity: 0;
   position: absolute;
   z-index: 2;
   top: 50px;
@@ -73,13 +75,24 @@
   padding: 10px;
   border: 4px #fff solid;
   border-radius: 10px;
-  transition: border-color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  transition: opacity 1s 0.75s ease-in-out, border-color 0.5s ease-in-out, background-color 0.5s ease-in-out;
   cursor: pointer;
 
   &:hover {
     border-color: rgb(84, 63, 255);
     background-color: transparent;
   }
+
+  &.isActive {
+    opacity: 1;
+  }
+}
+
+.AboutDesign {
+  top: unset;
+  right: unset;
+  bottom: 50px;
+  left: 50px;
 }
 
 .ModalContent {

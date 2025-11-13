@@ -18,7 +18,8 @@ export type Slide3Props = {
 };
 
 export const Slide3 = ({ ref, isActive }: Slide3Props) => {
-  const [modalIsActive, setModalIsActive] = useState(false);
+  const [modalDetailsIsActive, setModalDetailsIsActive] = useState(false);
+  const [modalDesignIsActive, setModalDesignIsActive] = useState(false);
 
   const arrowButtonClickHandler = () => {
     simulateWheel(1);
@@ -44,9 +45,19 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
     [styles.isActive]: isActive,
   });
 
+  const moreDetailsClassNames = classNames({
+    [styles.MoreDetails]: true,
+    [styles.isActive]: isActive,
+  });
+
+  const aboutDesignClassNames = classNames({
+    [styles.AboutDesign]: true,
+    [styles.isActive]: isActive,
+  });
+
   return (
     <SlideWrapper ref={ref} id="slide3" className={slideClassNames}>
-      <Modal isActive={modalIsActive} setIsActive={setModalIsActive}>
+      <Modal isActive={modalDetailsIsActive} setIsActive={setModalDetailsIsActive}>
         <div className={styles.ModalContent}>
           <div>
             <div className={styles.ModalContentLine}>
@@ -90,8 +101,16 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
         </div>
       </Modal>
 
-      <div className={styles.MoreDetails} onClick={() => setModalIsActive(true)}>
-        Подробнее
+      <Modal isActive={modalDesignIsActive} setIsActive={setModalDesignIsActive}>
+        О дизайне
+      </Modal>
+
+      <div className={moreDetailsClassNames} onClick={() => setModalDetailsIsActive(true)}>
+        Расчёты
+      </div>
+
+      <div className={aboutDesignClassNames} onClick={() => setModalDesignIsActive(true)}>
+        О дизайне
       </div>
 
       <img src={curveImage} alt="" className={imgClassNames} />
@@ -102,7 +121,6 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
 
       <div className={textClassNames}>
         Простой сотрудника, вызванный плохим UI/UX даже на 10 минут в день
-        <br />
         стоит компании <b>90 млн ₽</b> в год
         <br />
         <br />
@@ -113,7 +131,7 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
         + медленнее внедрение
         <br />
         <br />
-        Хороший дизайн — это не просто "красиво", это окупаемая инвестиция
+        Плохой дизайн — это не просто "не красиво", это большие потери для компании
       </div>
 
       <ArrowButton onClick={arrowButtonClickHandler} />

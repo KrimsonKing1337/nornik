@@ -28,15 +28,20 @@ export const Modal = ({
     e.stopPropagation();
   };
 
-  const wrapperClassNames = classNames({
+  const extraWrapperClassNames = classNames({
     [styles.ExtraWrapper]: true,
     [styles.isActive]: isActive,
     [className]: !!className,
   });
 
+  const wrapperClassNames = classNames({
+    [styles.Wrapper]: true,
+    [styles.isActive]: isActive,
+  });
+
   return createPortal(
-    <div className={wrapperClassNames} onClick={() => {setIsActive(false);}} onWheel={modalWheelHandler}>
-      <div className={styles.Wrapper} onClick={contentClickHandler}>
+    <div className={extraWrapperClassNames} onClick={() => {setIsActive(false);}} onWheel={modalWheelHandler}>
+      <div className={wrapperClassNames} onClick={contentClickHandler}>
         <div className={styles.CloseButtonWrapper} onClick={() => {setIsActive(false);}}>
           <img src={crossIcon} alt="" />
         </div>

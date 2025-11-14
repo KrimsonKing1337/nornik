@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 
+import RiskImage from 'assets/eco.jpg';
 
 import { ArrowButton } from 'components/ArrowButton';
 
@@ -29,8 +30,16 @@ export const Slide6 = ({ ref, isActive }: Slide6Props) => {
     [styles.isActive]: isActive,
   });
 
+  const imageClassNames = classNames({
+    [styles.Img]: true,
+    [styles.isActive]: isActive,
+  });
+
   return (
     <SlideWrapper ref={ref} id="slide5" className={styles.Wrapper}>
+      <img src={RiskImage} alt="" className={imageClassNames} />
+      <div className={styles.Shadow} />
+
       <div className={titleClassNames}>
         Заключение
       </div>

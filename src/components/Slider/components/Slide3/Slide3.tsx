@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import classNames from 'classnames';
 
-import curveImage from 'assets/curve_red_axes_downward_transparent.png';
+import badUxImage from 'assets/good-vs-bad-ux.jpg';
 
 import { ArrowButton, Modal } from 'components';
 
@@ -61,6 +61,9 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
 
   return (
     <SlideWrapper ref={ref} id="slide3" className={slideClassNames}>
+      <img src={badUxImage} alt="" className={imgClassNames} />
+      <div className={styles.Shadow} />
+
       <Modal isActive={modalDetailsIsActive} setIsActive={setModalDetailsIsActive}>
         <div className={styles.ModalContentWrapper}>
           <div className={styles.ModalContent}>
@@ -207,8 +210,6 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
       <div className={aboutDesignClassNames} onClick={() => setModalDesignIsActive(true)}>
         О дизайне
       </div>
-
-      <img src={curveImage} alt="" className={imgClassNames} />
 
       <div className={titleClassNames}>
         Плохой UI/UX

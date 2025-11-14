@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import classNames from 'classnames';
 
-import curveImage from 'assets/curve_red_axes_downward_transparent.png';
+import burningMoneyImage from 'assets/burning_money.jpg';
 
 import { ArrowButton, Modal } from 'components';
 
@@ -60,6 +60,9 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
 
   return (
     <SlideWrapper ref={ref} id="slide4" className={slideClassNames}>
+      <img src={burningMoneyImage} alt="" className={imgClassNames} />
+      <div className={styles.Shadow} />
+
       <Modal isActive={modalIsActive} setIsActive={setModalIsActive}>
         <div className={styles.ModalContentWrapper}>
           <div className={styles.ModalContent}>
@@ -113,8 +116,6 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
       <div className={calculationsClassNames} onClick={() => setModalIsActive(true)}>
         Подробнее
       </div>
-
-      <img src={curveImage} alt="" className={imgClassNames} />
 
       <div className={styles.Content}>
         <div className={titleClassNames}>

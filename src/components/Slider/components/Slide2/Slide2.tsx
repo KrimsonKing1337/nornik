@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import riskImage from 'assets/risk.jpg';
+import avaImage from 'assets/ava.jpg';
 
 import { ArrowButton } from 'components';
 
@@ -41,7 +41,7 @@ export const Slide2 = ({ ref, isActive }: Slide2Props) => {
 
   return (
     <SlideWrapper ref={ref} id="slide2" className={slideClassNames}>
-      <img src={riskImage} alt="" className={imgClassNames} />
+      <img src={avaImage} alt="" className={imgClassNames} />
 
       <div className={textWrapperClassNames}>
         <div className={styles.Text}>

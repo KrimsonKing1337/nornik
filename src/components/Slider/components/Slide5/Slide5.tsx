@@ -9,6 +9,7 @@ import { simulateWheel } from 'utils';
 import styles from './Slide5.scss';
 
 import { SlideWrapper } from '../SlideWrapper';
+import { Shadow } from '../../../Shadow';
 
 export type Slide5Props = {
   ref: React.Ref<HTMLDivElement>;
@@ -42,7 +43,7 @@ export const Slide5 = ({ ref, isActive }: Slide5Props) => {
   return (
     <SlideWrapper ref={ref} id="slide5" className={styles.Wrapper}>
       <img src={RiskImage} alt="" className={imageClassNames} />
-      <div className={styles.Shadow} />
+      <Shadow />
 
       <div className={titleClassNames}>
         Риски

@@ -6,3 +6,4 @@ export * from './Slider';
 export * from './ArrowButton';
 export * from './Modal';
 export * from './Shadow';
+export * from './BgImg';

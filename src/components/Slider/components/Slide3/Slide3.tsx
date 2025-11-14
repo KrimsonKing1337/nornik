@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import badUxImage from 'assets/good-vs-bad-ux.jpg';
 
-import { ArrowButton, Modal, Shadow } from 'components';
+import { ArrowButton, BgImg, Modal, Shadow } from 'components';
 
 import { simulateWheel } from 'utils';
 
@@ -61,7 +61,7 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
 
   return (
     <SlideWrapper ref={ref} id="slide3" className={slideClassNames}>
-      <img src={badUxImage} alt="" className={imgClassNames} />
+      <BgImg src={badUxImage} className={imgClassNames} />
       <Shadow />
 
       <Modal isActive={modalDetailsIsActive} setIsActive={setModalDetailsIsActive}>

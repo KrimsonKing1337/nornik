@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import burningMoneyImage from 'assets/burning_money.jpg';
 
-import { ArrowButton, Modal, Shadow } from 'components';
+import { ArrowButton, BgImg, Modal, Shadow } from 'components';
 
 import { simulateWheel } from 'utils';
 
@@ -60,7 +60,7 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
 
   return (
     <SlideWrapper ref={ref} id="slide4" className={slideClassNames}>
-      <img src={burningMoneyImage} alt="" className={imgClassNames} />
+      <BgImg src={burningMoneyImage} className={imgClassNames} />
       <Shadow />
 
       <Modal isActive={modalIsActive} setIsActive={setModalIsActive}>

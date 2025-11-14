@@ -10,6 +10,7 @@ import styles from './Slide5.scss';
 
 import { SlideWrapper } from '../SlideWrapper';
 import { Shadow } from '../../../Shadow';
+import { BgImg } from '../../../BgImg';
 
 export type Slide5Props = {
   ref: React.Ref<HTMLDivElement>;
@@ -42,7 +43,7 @@ export const Slide5 = ({ ref, isActive }: Slide5Props) => {
 
   return (
     <SlideWrapper ref={ref} id="slide5" className={styles.Wrapper}>
-      <img src={RiskImage} alt="" className={imageClassNames} />
+      <BgImg src={RiskImage} className={imageClassNames} />
       <Shadow />
 
       <div className={titleClassNames}>

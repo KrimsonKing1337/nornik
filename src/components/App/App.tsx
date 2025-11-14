@@ -6,9 +6,21 @@ import styles from './App.scss';
 
 export const App = () => {
   useEffect(() => {
-    setTimeout(() => {
+    if ('scrollRestoration' in window.history) {
+      const defaultValue = window.history.scrollRestoration;
+
+      window.history.scrollRestoration = 'manual';
+
       window.scrollTo(0, 0);
-    }, 100);
+
+      return () => {
+        window.history.scrollRestoration = defaultValue;
+      };
+    } else {
+      return () => {
+        window.scrollTo(0, 0);
+      };
+    }
   }, []);
 
   return (

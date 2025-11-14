@@ -68,7 +68,7 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
             </div>
 
             <div className={styles.ModalContentLine}>
-              2 Backend-разработчика
+              Два Backend-разработчика
             </div>
 
             <div className={styles.ModalContentLine}>

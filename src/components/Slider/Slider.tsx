@@ -60,10 +60,6 @@ export const Slider = () => {
   }, [index]);
 
   useEffect(() => {
-    window.addEventListener('keydown', (e: KeyboardEvent) => {
-      e.preventDefault();
-    });
-
     const handleTouchStart = (e: TouchEvent) => {
       touchStartY = e.touches[0].clientY;
     };
@@ -82,6 +78,20 @@ export const Slider = () => {
 
     window.addEventListener('touchstart', handleTouchStart, { passive: false });
     window.addEventListener('touchend', handleTouchEnd, { passive: false });
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+
+        simulateWheel(1);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+
+        simulateWheel(-1);
+      }
+    });
   }, []);
 
   return (

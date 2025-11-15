@@ -38,13 +38,19 @@ export const Slide5 = ({ ref, isActive }: Slide5Props) => {
 
   const imageClassNames = classNames({
     [styles.Img]: true,
+    [styles.important]: true,
     [styles.isActive]: isActive,
+  });
+
+  const shadowClassNames = classNames({
+    [styles.Shadow]: true,
+    [styles.important]: true,
   });
 
   return (
     <SlideWrapper ref={ref} id="slide5" className={styles.Wrapper}>
       <BgImg src={RiskImage} className={imageClassNames} />
-      <Shadow />
+      <Shadow className={shadowClassNames} />
 
       <div className={titleClassNames}>
         Риски

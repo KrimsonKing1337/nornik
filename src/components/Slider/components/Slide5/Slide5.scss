@@ -1,49 +1,54 @@
 .Wrapper {
   position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-image: linear-gradient(128deg, rgb(64, 175, 255), rgb(255, 75, 64));
   overflow: hidden;
 }
 
 .Title {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: -10%;
-  margin: auto;
   font-size: 48px;
   color: #fff;
-  transform: translateX(-50%);
-  transition: top 1s ease-in-out, left 1s ease-in-out;
+  transform: translate(-100vh, -50vh);
+  transition: transform 1s ease-in-out;
 
   &.isActive {
-    top: 15%;
-    left: 50%;
+    transform: translate(0);
   }
 }
 
 .Text {
-  position: absolute;
-  z-index: 2;
-  right: -10%;
-  bottom: -50%;
-  width: 40%;
   font-size: 24px;
   line-height: 1.25;
   color: #fff;
-  transform: translateX(50%);
-  transition: bottom 1s ease-in-out, right 1s ease-in-out;
+  transform: translate(100vh, -50vh);
+  transition: transform 1s ease-in-out;
 
   &.isActive {
-    right: 50%;
-    bottom: 40%;
+    transform: translate(0);
   }
 }
 
 .Img {
-  top: -100%;
+  top: -100vh;
+  z-index: 0;
   transition: top 1s ease-in-out;
+
+  &.important {
+    z-index: 0;
+    top: -100vh;
+
+    &.isActive {
+      top: 0;
+    }
+  }
 
   &.isActive {
     top: 0;
   }
+}
+
+.Shadow.important {
+  z-index: 0;
 }

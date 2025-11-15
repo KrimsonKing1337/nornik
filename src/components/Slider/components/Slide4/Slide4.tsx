@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import burningMoneyImage from 'assets/burning_money.jpg';
 
-import { ArrowButton, BgImg, Content, Modal, MoreButton, Shadow } from 'components';
+import { ArrowButton, BgImg, Content, Modal, MoreButton, Shadow, Text, Title } from 'components';
 
 import { simulateWheel } from 'utils';
 
@@ -124,9 +124,9 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
       </MoreButton>
 
       <Content>
-        <div className={titleClassNames}>
+        <Title className={titleClassNames}>
           Замена на двух BE
-        </div>
+        </Title>
 
         <div className={tableWrapperClassNames}>
           <table>
@@ -216,11 +216,11 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
           </table>
         </div>
 
-        <div className={textClassNames}>
+        <Text className={textClassNames}>
           Компания потратит в 4–5 раз больше, чем стоит экспертиза FE-разработчика.
           <br />
           И при этом получит хуже результат и долгосрочный убыток.
-        </div>
+        </Text>
       </Content>
 
       <ArrowButton isPrev onClick={prevArrowButtonClickHandler} />

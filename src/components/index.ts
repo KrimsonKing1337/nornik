@@ -9,3 +9,5 @@ export * from './Shadow';
 export * from './BgImg';
 export * from './Content';
 export * from './MoreButton';
+export * from './Title';
+export * from './Text';

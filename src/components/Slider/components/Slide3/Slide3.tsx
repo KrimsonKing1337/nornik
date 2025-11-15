@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import badUxImage from 'assets/good-vs-bad-ux.jpg';
 
-import { ArrowButton, BgImg, Content, Modal, MoreButton, Shadow } from 'components';
+import { ArrowButton, BgImg, Content, Modal, MoreButton, Shadow, Text, Title } from 'components';
 
 import { simulateWheel } from 'utils';
 
@@ -212,11 +212,11 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
       </MoreButton>
 
       <Content>
-        <div className={titleClassNames}>
+        <Title className={titleClassNames}>
           Плохой UI/UX
-        </div>
+        </Title>
 
-        <div className={textClassNames}>
+        <Text className={textClassNames}>
           Простой сотрудника, вызванный плохим UI/UX даже на 10 минут в день,
           <br />
           стоит компании <b>90 млн ₽</b> в год
@@ -230,7 +230,7 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
           <br />
           <br />
           Плохой дизайн - это не просто "не красиво", - это большие потери для компании
-        </div>
+        </Text>
       </Content>
 
       <ArrowButton isPrev onClick={prevArrowButtonClickHandler} />

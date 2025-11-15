@@ -2,16 +2,13 @@ import classNames from 'classnames';
 
 import RiskImage from 'assets/eco.jpg';
 
-import { ArrowButton } from 'components/ArrowButton';
+import { ArrowButton, Shadow, BgImg, Content, Title, Text } from 'components';
 
 import { simulateWheel } from 'utils';
 
-import styles from './Slide6.scss';
-
 import { SlideWrapper } from '../SlideWrapper';
-import { Shadow } from '../../../Shadow';
-import { BgImg } from '../../../BgImg';
-import { Content } from '../../../Content';
+
+import styles from './Slide6.scss';
 
 export type Slide6Props = {
   ref: React.Ref<HTMLDivElement>;
@@ -44,18 +41,18 @@ export const Slide6 = ({ ref, isActive }: Slide6Props) => {
       <Shadow />
 
       <Content>
-        <div className={titleClassNames}>
+        <Title className={titleClassNames}>
           Заключение
-        </div>
+        </Title>
 
-        <div className={textClassNames}>
+        <Text className={textClassNames}>
           Инвестиции в экспертизу — это не траты, а экономия.
           <br />
           <br />
           Один сильный специалист может сэкономить компании
           <br />
           десятки миллионов рублей и годы времени.
-        </div>
+        </Text>
       </Content>
 
       <ArrowButton isPrev onClick={prevArrowButtonClickHandler} />

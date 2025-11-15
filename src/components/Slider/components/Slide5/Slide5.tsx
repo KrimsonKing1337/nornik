@@ -2,7 +2,7 @@ import classNames from 'classnames';
 
 import RiskImage from 'assets/risk.jpg';
 
-import { ArrowButton, Shadow, BgImg, Content } from 'components';
+import { ArrowButton, Shadow, BgImg, Content, Title, Text } from 'components';
 
 import { simulateWheel } from 'utils';
 
@@ -45,11 +45,11 @@ export const Slide5 = ({ ref, isActive }: Slide5Props) => {
       <Shadow />
 
       <Content>
-        <div className={titleClassNames}>
+        <Title className={titleClassNames}>
           Риски
-        </div>
+        </Title>
 
-        <div className={textClassNames}>
+        <Text className={textClassNames}>
           Уход фронтенд-эксперта приведёт к росту затрат и задержкам развития продукта.
           <br />
           <br />
@@ -62,7 +62,7 @@ export const Slide5 = ({ ref, isActive }: Slide5Props) => {
           + повышение нагрузки на других разработчиков
           <br />
           + увеличение простоев пользователей и расходов на поддержку
-        </div>
+        </Text>
       </Content>
 
       <ArrowButton isPrev onClick={prevArrowButtonClickHandler} />

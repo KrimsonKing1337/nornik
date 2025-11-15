@@ -5,8 +5,6 @@
 }
 
 .Title {
-  font-size: 52px;
-  color: #fff;
   transform: translate(-100vh);
   transition: transform 1s ease-in-out;
 
@@ -16,9 +14,6 @@
 }
 
 .Text {
-  font-size: 26px;
-  line-height: 1.4;
-  color: #fff;
   margin-top: 50px;
   transform: translate(100vh);
   transition: transform 1s ease-in-out;

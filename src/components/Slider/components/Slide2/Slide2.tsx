@@ -2,7 +2,7 @@ import classNames from 'classnames';
 
 import avaImage from 'assets/ava.jpg';
 
-import { ArrowButton } from 'components';
+import { ArrowButton, Text } from 'components';
 
 import { simulateWheel } from 'utils';
 
@@ -44,7 +44,7 @@ export const Slide2 = ({ ref, isActive }: Slide2Props) => {
       <img src={avaImage} alt="" className={imgClassNames} />
 
       <div className={textWrapperClassNames}>
-        <div className={styles.Text}>
+        <Text>
           Риски и последствия
           <br />
           при отсутствии FE-разработчика
@@ -53,7 +53,7 @@ export const Slide2 = ({ ref, isActive }: Slide2Props) => {
           Олег Шилов
           <br />
           Ноябрь 2025
-        </div>
+        </Text>
       </div>
 
       <ArrowButton isPrev onClick={prevArrowButtonClickHandler} />

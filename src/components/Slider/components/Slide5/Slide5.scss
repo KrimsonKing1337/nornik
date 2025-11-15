@@ -6,8 +6,6 @@
 
 .Title {
   z-index: 2;
-  font-size: 48px;
-  color: #fff;
   transform: translate(-100vh, -50vh);
   transition: transform 1s ease-in-out;
 
@@ -18,9 +16,6 @@
 
 .Text {
   z-index: 2;
-  font-size: 24px;
-  line-height: 1.25;
-  color: #fff;
   transform: translate(100vh, -50vh);
   transition: transform 1s ease-in-out;
 

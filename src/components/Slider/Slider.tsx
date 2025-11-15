@@ -82,11 +82,11 @@ export const Slider = () => {
 
   useEffect(() => {
     window.addEventListener('keydown', (e: KeyboardEvent) => {
-      if (e.key === 'ArrowDown') {
+      if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
         e.preventDefault();
 
         simulateWheel(1);
-      } else if (e.key === 'ArrowUp') {
+      } else if (e.key === 'ArrowUp' || e.key === 'PageUp' || e.key === 'Backspace') {
         e.preventDefault();
 
         simulateWheel(-1);

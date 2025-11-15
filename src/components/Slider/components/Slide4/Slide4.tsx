@@ -77,23 +77,23 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
             </div>
 
             <div className={styles.ModalContentLine}>
-              Два Backend-разработчика
+              Два Backend-разработчика.
             </div>
 
             <div className={styles.ModalContentLine}>
-              Зарплата каждого: 250 000 ₽/мес
+              Зарплата каждого: 250 000 ₽/мес.
             </div>
 
             <div className={styles.ModalContentLine}>
-              Вместе: 500 000 ₽/мес
+              Вместе: 500 000 ₽/мес.
             </div>
 
             <div className={styles.ModalContentLine}>
-              +30% взносы и налоги = 650 000 ₽/мес
+              +30% взносы и налоги = 650 000 ₽/мес.
             </div>
 
             <div className={styles.ModalContentLine}>
-              За год: 650 000 × 12 = 7 800 000 ₽
+              За год: 650 000 × 12 = 7 800 000 ₽.
             </div>
 
             <div className={styles.ModalContentSubTitle}>
@@ -105,15 +105,15 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
             </div>
 
             <div className={styles.ModalContentLine}>
-              3–4 месяца (в лучшем случае) — обучение, ошибки, медленная скорость: ~2 млн ₽ вхолостую
+              3–4 месяца (в лучшем случае) — обучение, ошибки, медленная скорость: ~2 млн ₽ вхолостую.
             </div>
 
             <div className={styles.ModalContentLine}>
-              оставшиеся месяцы — низкая производительность (в 2–3 раза ниже): ещё 2–3 млн ₽ потерь
+              Оставшиеся месяцы — низкая производительность (в 2–3 раза ниже): ещё 2–3 млн ₽ потерь.
             </div>
 
             <div className={styles.ModalContentLine}>
-              итоговая стоимость при переписывании кода через год: ещё +3–5 млн ₽
+              Итоговая стоимость при переписывании кода через год: ещё +3–5 млн ₽
             </div>
           </div>
         </div>

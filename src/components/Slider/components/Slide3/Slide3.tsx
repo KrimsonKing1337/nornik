@@ -216,7 +216,8 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
       </div>
 
       <div className={textClassNames}>
-        Простой сотрудника, вызванный плохим UI/UX даже на 10 минут в день
+        Простой сотрудника, вызванный плохим UI/UX даже на 10 минут в день,
+        <br />
         стоит компании <b>90 млн ₽</b> в год
         <br />
         <br />
@@ -227,7 +228,7 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
         + медленнее внедрение
         <br />
         <br />
-        Плохой дизайн — это не просто "не красиво", это большие потери для компании
+        Плохой дизайн - это не просто "не красиво", - это большие потери для компании
       </div>
 
       <ArrowButton isPrev onClick={prevArrowButtonClickHandler} />

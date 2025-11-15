@@ -64,22 +64,7 @@
   z-index: 2;
   left: -200%;
   bottom: 50px;
-  font-size: 48px;
-  color: #fff;
-  background: #2A2E7B;
-  padding: 10px;
-  border: 4px #fff solid;
-  border-radius: 10px;
-  transition: left 1s ease-in-out,
-  border-color 0.5s ease-in-out,
-  background-color 0.5s ease-in-out;
   transform: translateX(calc(-100% - 50px));
-  cursor: pointer;
-
-  &:hover {
-    border-color: #2A2E7B;
-    background-color: transparent;
-  }
 
   &.isActive {
     left: 100%;

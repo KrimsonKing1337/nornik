@@ -5,7 +5,7 @@
 }
 
 .Title {
-  font-size: 48px;
+  font-size: 52px;
   color: #fff;
   transform: translate(-100vh);
   transition: transform 1s ease-in-out;
@@ -16,8 +16,8 @@
 }
 
 .Text {
-  font-size: 24px;
-  line-height: 1.25;
+  font-size: 26px;
+  line-height: 1.4;
   color: #fff;
   margin-top: 50px;
   transform: translate(100vh);
@@ -43,22 +43,6 @@
   z-index: 3;
   top: -100vh;
   right: 50px;
-  font-size: 48px;
-  color: #fff;
-  background: rgb(84, 63, 255);
-  padding: 10px;
-  border: 4px #fff solid;
-  border-radius: 10px;
-  transition: top 1s ease-in-out,
-  bottom 1s ease-in-out,
-  border-color 0.5s ease-in-out,
-  background-color 0.5s ease-in-out;
-  cursor: pointer;
-
-  &:hover {
-    border-color: rgb(84, 63, 255);
-    background-color: transparent;
-  }
 
   &.isActive {
     top: 50px;

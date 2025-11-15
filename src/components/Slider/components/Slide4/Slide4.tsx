@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import burningMoneyImage from 'assets/burning_money.jpg';
 
-import { ArrowButton, BgImg, Content, Modal, Shadow } from 'components';
+import { ArrowButton, BgImg, Content, Modal, MoreButton, Shadow } from 'components';
 
 import { simulateWheel } from 'utils';
 
@@ -119,9 +119,9 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
         </div>
       </Modal>
 
-      <div className={calculationsClassNames} onClick={() => setModalIsActive(true)}>
+      <MoreButton className={calculationsClassNames} onClick={() => setModalIsActive(true)}>
         Подробнее
-      </div>
+      </MoreButton>
 
       <Content>
         <div className={titleClassNames}>

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import badUxImage from 'assets/good-vs-bad-ux.jpg';
 
-import { ArrowButton, BgImg, Content, Modal, Shadow } from 'components';
+import { ArrowButton, BgImg, Content, Modal, MoreButton, Shadow } from 'components';
 
 import { simulateWheel } from 'utils';
 
@@ -203,13 +203,13 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
         </div>
       </Modal>
 
-      <div className={moreDetailsClassNames} onClick={() => setModalDetailsIsActive(true)}>
+      <MoreButton className={moreDetailsClassNames} onClick={() => setModalDetailsIsActive(true)}>
         Расчёты
-      </div>
+      </MoreButton>
 
-      <div className={aboutDesignClassNames} onClick={() => setModalDesignIsActive(true)}>
+      <MoreButton className={aboutDesignClassNames} onClick={() => setModalDesignIsActive(true)}>
         О дизайне
-      </div>
+      </MoreButton>
 
       <Content>
         <div className={titleClassNames}>

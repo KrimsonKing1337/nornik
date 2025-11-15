@@ -2,15 +2,13 @@ import classNames from 'classnames';
 
 import RiskImage from 'assets/risk.jpg';
 
-import { ArrowButton } from 'components/ArrowButton';
+import { ArrowButton, Shadow, BgImg, Content } from 'components';
 
 import { simulateWheel } from 'utils';
 
 import styles from './Slide5.scss';
 
 import { SlideWrapper } from '../SlideWrapper';
-import { Shadow } from '../../../Shadow';
-import { BgImg } from '../../../BgImg';
 
 export type Slide5Props = {
   ref: React.Ref<HTMLDivElement>;
@@ -46,24 +44,26 @@ export const Slide5 = ({ ref, isActive }: Slide5Props) => {
       <BgImg src={RiskImage} className={imageClassNames} />
       <Shadow />
 
-      <div className={titleClassNames}>
-        Риски
-      </div>
+      <Content>
+        <div className={titleClassNames}>
+          Риски
+        </div>
 
-      <div className={textClassNames}>
-        Уход фронтенд-эксперта приведёт к росту затрат и задержкам развития продукта.
-        <br />
-        <br />
-        + потеря экспертизы и понимания архитектуры
-        <br />
-        + рост технического долга
-        <br />
-        + замедление обновлений
-        <br />
-        + повышение нагрузки на других разработчиков
-        <br />
-        + увеличение простоев пользователей и расходов на поддержку
-      </div>
+        <div className={textClassNames}>
+          Уход фронтенд-эксперта приведёт к росту затрат и задержкам развития продукта.
+          <br />
+          <br />
+          + потеря экспертизы и понимания архитектуры
+          <br />
+          + рост технического долга
+          <br />
+          + замедление обновлений
+          <br />
+          + повышение нагрузки на других разработчиков
+          <br />
+          + увеличение простоев пользователей и расходов на поддержку
+        </div>
+      </Content>
 
       <ArrowButton isPrev onClick={prevArrowButtonClickHandler} />
       <ArrowButton onClick={nextArrowButtonClickHandler} />

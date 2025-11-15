@@ -1,17 +1,12 @@
 .Wrapper {
   position: relative;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
   background-image: linear-gradient(128deg, rgb(252, 64, 255), rgb(84, 63, 255));
   overflow: hidden;
 }
 
 .Title {
-  z-index: 2;
   font-size: 48px;
   color: #fff;
-  margin-top: 15vh;
   transform: translate(-100vh);
   transition: transform 1s ease-in-out;
 
@@ -21,11 +16,10 @@
 }
 
 .Text {
-  z-index: 2;
   font-size: 24px;
   line-height: 1.25;
   color: #fff;
-  margin-top: 10vh;
+  margin-top: 50px;
   transform: translate(100vh);
   transition: transform 1s ease-in-out;
 
@@ -46,8 +40,8 @@
 .MoreDetails,
 .AboutDesign {
   position: absolute;
-  z-index: 2;
-  top: -200%;
+  z-index: 3;
+  top: -100vh;
   right: 50px;
   font-size: 48px;
   color: #fff;
@@ -74,7 +68,7 @@
 .AboutDesign {
   top: unset;
   right: unset;
-  bottom: -200%;
+  bottom: -100vh;
   left: 50px;
 
   &.isActive {

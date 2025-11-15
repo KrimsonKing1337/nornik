@@ -11,6 +11,7 @@ import styles from './Slide6.scss';
 import { SlideWrapper } from '../SlideWrapper';
 import { Shadow } from '../../../Shadow';
 import { BgImg } from '../../../BgImg';
+import { Content } from '../../../Content';
 
 export type Slide6Props = {
   ref: React.Ref<HTMLDivElement>;
@@ -42,18 +43,20 @@ export const Slide6 = ({ ref, isActive }: Slide6Props) => {
       <BgImg src={RiskImage} className={imageClassNames} />
       <Shadow />
 
-      <div className={titleClassNames}>
-        Заключение
-      </div>
+      <Content>
+        <div className={titleClassNames}>
+          Заключение
+        </div>
 
-      <div className={textClassNames}>
-        Инвестиции в экспертизу — это не траты, а экономия.
-        <br />
-        <br />
-        Один сильный специалист может сэкономить компании
-        <br />
-        десятки миллионов рублей и годы времени.
-      </div>
+        <div className={textClassNames}>
+          Инвестиции в экспертизу — это не траты, а экономия.
+          <br />
+          <br />
+          Один сильный специалист может сэкономить компании
+          <br />
+          десятки миллионов рублей и годы времени.
+        </div>
+      </Content>
 
       <ArrowButton isPrev onClick={prevArrowButtonClickHandler} />
     </SlideWrapper>

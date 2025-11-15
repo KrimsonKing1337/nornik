@@ -1,5 +1,8 @@
 .Wrapper {
   position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   background-image: linear-gradient(128deg, rgb(252, 64, 255), rgb(84, 63, 255));
   overflow: hidden;
 }
@@ -14,34 +17,28 @@
 }
 
 .Title {
-  position: absolute;
-  z-index: 2;
-  top: 15%;
-  left: -100%;
-  margin: auto;
   font-size: 48px;
   color: #fff;
-  transform: translateX(-50%);
-  transition: left 1s ease-in-out;
+  margin-top: 15vh;
+  transform: translate(-100vh);
+  transition: transform 1s ease-in-out;
 
   &.isActive {
-    left: 50%;
+    transform: translate(0);
   }
 }
 
 .Text {
-  position: absolute;
-  z-index: 2;
-  right: -100%;
   width: 40%;
   font-size: 24px;
   line-height: 1.25;
   color: #fff;
-  transform: translateX(50%);
-  transition: right 1s ease-in-out;
+  margin-top: 10vh;
+  transform: translate(100vh);
+  transition: transform 1s ease-in-out;
 
   &.isActive {
-    right: 50%;
+    transform: translate(0);
   }
 }
 
@@ -52,6 +49,14 @@
   &.isActive {
     transform: rotateY(0deg);
   }
+}
+
+.Img.important {
+  z-index: 0;
+}
+
+.Shadow.important {
+  z-index: 0;
 }
 
 .MoreDetails,

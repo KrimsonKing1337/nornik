@@ -36,7 +36,13 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
 
   const imgClassNames = classNames({
     [styles.Img]: true,
+    [styles.important]: true,
     [styles.isActive]: isActive,
+  });
+
+  const shadowClassNames = classNames({
+    [styles.Shadow]: true,
+    [styles.important]: true,
   });
 
   const titleClassNames = classNames({
@@ -62,7 +68,7 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
   return (
     <SlideWrapper ref={ref} id="slide3" className={slideClassNames}>
       <BgImg src={badUxImage} className={imgClassNames} />
-      <Shadow />
+      <Shadow className={shadowClassNames} />
 
       <Modal isActive={modalDetailsIsActive} setIsActive={setModalDetailsIsActive}>
         <div className={styles.ModalContentWrapper}>

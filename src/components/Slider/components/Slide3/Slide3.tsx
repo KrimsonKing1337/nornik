@@ -119,7 +119,7 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
               </div>
 
               <div className={styles.ModalContentSubTitle}>
-                Меньше потерь времени сотрудников
+                → Меньше потерь времени сотрудников
               </div>
 
               <div className={styles.ModalContentLine}>
@@ -136,7 +136,7 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
               </div>
 
               <div className={styles.ModalContentSubTitle}>
-                Снижение ошибок и затрат на исправление
+                → Снижение ошибок и затрат на исправление
               </div>
 
               <div className={styles.ModalContentLine}>
@@ -153,7 +153,7 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
               </div>
 
               <div className={styles.ModalContentSubTitle}>
-                Меньше обращений в поддержку и обучение
+                → Меньше обращений в поддержку и обучение
               </div>
 
               <div className={styles.ModalContentLine}>
@@ -172,11 +172,11 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
               </div>
 
               <div className={styles.ModalContentSubTitle}>
-                Повышение вовлечённости и удовлетворённости
+                → Повышение вовлечённости и удовлетворённости
               </div>
 
               <div className={styles.ModalContentLine}>
-                Люди чаще и охотнее пользуются системой, где всё работает плавно и понятно
+                Люди чаще и охотнее пользуются системой, где всё работает плавно и понятно.
               </div>
 
               <div className={styles.ModalContentLine}>
@@ -186,7 +186,7 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
               </div>
 
               <div className={styles.ModalContentSubTitle}>
-                Ускорение внедрения изменений
+                → Ускорение внедрения изменений
               </div>
 
               <div className={styles.ModalContentLine}>

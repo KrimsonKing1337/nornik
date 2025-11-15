@@ -35,7 +35,13 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
 
   const imgClassNames = classNames({
     [styles.Img]: true,
+    [styles.important]: true,
     [styles.isActive]: isActive,
+  });
+
+  const shadowClassNames = classNames({
+    [styles.Shadow]: true,
+    [styles.important]: true,
   });
 
   const titleClassNames = classNames({
@@ -61,7 +67,7 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
   return (
     <SlideWrapper ref={ref} id="slide4" className={slideClassNames}>
       <BgImg src={burningMoneyImage} className={imgClassNames} />
-      <Shadow />
+      <Shadow className={shadowClassNames} />
 
       <Modal isActive={modalIsActive} setIsActive={setModalIsActive}>
         <div className={styles.ModalContentWrapper}>
@@ -117,103 +123,102 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
         Подробнее
       </div>
 
-      <div className={styles.Content}>
-        <div className={titleClassNames}>
-          Замена на двух BE
-        </div>
+      <div className={titleClassNames}>
+        Замена на двух BE
+      </div>
 
-        <div className={tableWrapperClassNames}>
-          <table>
-            <thead>
-              <tr>
-                <th>
-                Компонент
-                </th>
+      <div className={tableWrapperClassNames}>
+        <table>
+          <thead>
+            <tr>
+              <th>
+              Компонент
+              </th>
 
-                <th>
-                Потери
-                </th>
-              </tr>
-            </thead>
+              <th>
+              Потери
+              </th>
+            </tr>
+          </thead>
 
-            <tbody>
-              <tr>
-                <td>
-                &nbsp;
-                </td>
+          <tbody>
+            <tr>
+              <td>
+              &nbsp;
+              </td>
 
-                <td>
-                &nbsp;
-                </td>
-              </tr>
+              <td>
+              &nbsp;
+              </td>
+            </tr>
 
-              <tr>
-                <td>
-                Зарплаты и налоги
-                </td>
+            <tr>
+              <td>
+              Зарплаты и налоги
+              </td>
 
-                <td>
-                7 800 000
-                </td>
-              </tr>
+              <td>
+              7 800 000
+              </td>
+            </tr>
 
-              <tr>
-                <td>
-                Обучение и ошибки
-                </td>
+            <tr>
+              <td>
+              Обучение и ошибки
+              </td>
 
-                <td>
-                2 000 000
-                </td>
-              </tr>
+              <td>
+              2 000 000
+              </td>
+            </tr>
 
-              <tr>
-                <td>
-                Низкая эффективность
-                </td>
+            <tr>
+              <td>
+              Низкая эффективность
+              </td>
 
-                <td>
-                2 500 000
-                </td>
-              </tr>
+              <td>
+              2 500 000
+              </td>
+            </tr>
 
-              <tr>
-                <td>
-                Техдолг и переписывание
-                </td>
+            <tr>
+              <td>
+              Техдолг и переписывание
+              </td>
 
-                <td>
-                4 000 000
-                </td>
-              </tr>
+              <td>
+              4 000 000
+              </td>
+            </tr>
 
-              <tr>
-                <td>
-                &nbsp;
-                </td>
+            <tr>
+              <td>
+              &nbsp;
+              </td>
 
-                <td>
-                &nbsp;
-                </td>
-              </tr>
+              <td>
+              &nbsp;
+              </td>
+            </tr>
 
-              <tr>
-                <td>
-                Совокупные потери за год
-                </td>
+            <tr>
+              <td>
+              Совокупные потери за год
+              </td>
 
-                <td>
-                ≈16 млн ₽
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+              <td>
+              ≈16 млн ₽
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-        <div className={textClassNames}>
-          Компания потратит в 4–5 раз больше, чем стоит экспертиза FE-разработчика.
-          И при этом получит хуже результат и долгосрочный убыток.
-        </div>
+      <div className={textClassNames}>
+        Компания потратит в 4–5 раз больше, чем стоит экспертиза FE-разработчика.
+        <br />
+        И при этом получит хуже результат и долгосрочный убыток.
       </div>
 
       <ArrowButton isPrev onClick={prevArrowButtonClickHandler} />

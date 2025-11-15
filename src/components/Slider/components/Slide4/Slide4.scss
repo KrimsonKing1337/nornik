@@ -21,7 +21,7 @@
   justify-content: center;
   width: 100%;
   font-size: 36px;
-  margin-top: 25px;
+  margin-top: 50px;
   transform: translateY(100vh);
   transition: transform 1s ease-in-out;
 
@@ -110,7 +110,7 @@
 
 .Text {
   z-index: 2;
-  margin-top: 35px;
+  margin-top: 36px;
   transform: translateX(100vh);
   transition: transform 1s ease-in-out;
 
@@ -118,4 +118,3 @@
     transform: translateX(0);
   }
 }
-

@@ -38,7 +38,7 @@ export const Slide6 = ({ ref, isActive }: Slide6Props) => {
   });
 
   return (
-    <SlideWrapper ref={ref} id="slide5" className={styles.Wrapper}>
+    <SlideWrapper ref={ref} id="slide6" className={styles.Wrapper}>
       <BgImg src={RiskImage} className={imageClassNames} />
       <Shadow />
 

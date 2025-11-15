@@ -1,21 +1,19 @@
 .Wrapper {
   position: relative;
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-image: linear-gradient(128deg, rgb(252, 64, 255), rgb(4, 1, 87));
   overflow: hidden;
 }
 
 .Title {
   opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: 2;
-  top: 15%;
-  left: 50%;
-  margin: auto;
   font-size: 48px;
   color: #fff;
-  transform: translateX(-50%);
-  transition: opacity 1s 0.5s ease-in-out;
+  transition: opacity 1.5s 0.5s ease-in-out;
+  z-index: 2;
 
   &.isActive {
     opacity: 1;
@@ -24,15 +22,11 @@
 
 .Text {
   opacity: 0;
-  position: absolute;
-  z-index: 2;
-  right: 50%;
-  width: 40%;
   font-size: 24px;
   line-height: 1.25;
   color: #fff;
-  transform: translateX(50%);
-  transition: opacity 1s 0.5s ease-in-out;
+  transition: opacity 1.5s 0.5s ease-in-out;
+  z-index: 2;
 
   &.isActive {
     opacity: 1;
@@ -41,11 +35,10 @@
 
 .Img {
   top: unset;
-  bottom: -100%;
+  bottom: -100vh;
   transition: bottom 1s ease-in-out;
 
   &.isActive {
     bottom: 0;
   }
 }
-

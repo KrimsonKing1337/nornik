@@ -8,6 +8,7 @@
 }
 
 .Title {
+  z-index: 2;
   font-size: 48px;
   color: #fff;
   transform: translate(-100vh, -50vh);
@@ -19,6 +20,7 @@
 }
 
 .Text {
+  z-index: 2;
   font-size: 24px;
   line-height: 1.25;
   color: #fff;
@@ -32,23 +34,9 @@
 
 .Img {
   top: -100vh;
-  z-index: 0;
   transition: top 1s ease-in-out;
-
-  &.important {
-    z-index: 0;
-    top: -100vh;
-
-    &.isActive {
-      top: 0;
-    }
-  }
 
   &.isActive {
     top: 0;
   }
-}
-
-.Shadow.important {
-  z-index: 0;
 }

@@ -7,16 +7,8 @@
   overflow: hidden;
 }
 
-.ButtonDown {
-  position: absolute;
-  z-index: 1;
-  bottom: 50px;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
 .Title {
+  z-index: 2;
   font-size: 48px;
   color: #fff;
   margin-top: 15vh;
@@ -29,7 +21,7 @@
 }
 
 .Text {
-  width: 40%;
+  z-index: 2;
   font-size: 24px;
   line-height: 1.25;
   color: #fff;
@@ -49,14 +41,6 @@
   &.isActive {
     transform: rotateY(0deg);
   }
-}
-
-.Img.important {
-  z-index: 0;
-}
-
-.Shadow.important {
-  z-index: 0;
 }
 
 .MoreDetails,

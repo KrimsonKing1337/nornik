@@ -1,29 +1,30 @@
 .Wrapper {
   position: absolute;
   z-index: 5;
-  bottom: 50px;
+  bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  width: 75px;
-  height: 75px;
+  width: 48px;
+  height: 48px;
+  opacity: 0.8;
   transform: rotate(90deg);
   transition: bottom 0.3s ease-in-out;
   cursor: pointer;
 
   &:hover {
-    bottom: 60px;
+    bottom: 10px;
   }
 
   &.isPrev {
     bottom: unset;
-    top: 50px;
+    top: 0;
     transform: rotate(270deg);
     transition: top 0.3s ease-in-out;
 
     &:hover {
       bottom: unset;
-      top: 40px;
+      top: 10px;
     }
   }
 }

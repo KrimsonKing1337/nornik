@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import classNames from 'classnames';
 
-import badUxImage from 'assets/good-vs-bad-ux.jpg';
+import designImage from 'assets/design.jpg';
 
 import { ArrowButton, BgImg, Content, Modal, MoreButton, Shadow, Text, Title } from 'components';
 
@@ -61,7 +61,7 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
 
   return (
     <SlideWrapper ref={ref} id="slide3" className={slideClassNames}>
-      <BgImg src={badUxImage} className={imgClassNames} />
+      <BgImg src={designImage} className={imgClassNames} />
       <Shadow />
 
       <Modal isActive={modalDetailsIsActive} setIsActive={setModalDetailsIsActive}>
@@ -203,13 +203,17 @@ export const Slide3 = ({ ref, isActive }: Slide3Props) => {
         </div>
       </Modal>
 
-      <MoreButton className={moreDetailsClassNames} onClick={() => setModalDetailsIsActive(true)}>
-        Расчёты
-      </MoreButton>
+      <div className={moreDetailsClassNames} onClick={() => setModalDetailsIsActive(true)}>
+        <MoreButton>
+          Расчёты
+        </MoreButton>
+      </div>
 
-      <MoreButton className={aboutDesignClassNames} onClick={() => setModalDesignIsActive(true)}>
-        О дизайне
-      </MoreButton>
+      <div className={aboutDesignClassNames} onClick={() => setModalDesignIsActive(true)}>
+        <MoreButton>
+          О дизайне
+        </MoreButton>
+      </div>
 
       <Content>
         <Title className={titleClassNames}>

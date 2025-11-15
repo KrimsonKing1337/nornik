@@ -24,9 +24,9 @@
   overflow: auto;
   overscroll-behavior: none;
   backdrop-filter: blur(14px);
-  background: rgba(0,0,0,0.25);
+  background: rgba(#111, 0.25);
   transform: translate(-50%, -50%);
-  border-radius: 6px;
+  border-radius: 24px;
   transition: opacity 0.4s ease-in-out;
   cursor: auto;
 
@@ -56,8 +56,9 @@
   margin-right: 15px;
   margin-left: auto;
   float: right;
-  height: 45px;
-  width: 45px;
+  height: 36px;
+  width: 36px;
+  opacity: 0.8;
   cursor: pointer;
   transition: transform 0.5s ease-in-out;
 

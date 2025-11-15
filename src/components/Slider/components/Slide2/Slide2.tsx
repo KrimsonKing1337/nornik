@@ -48,11 +48,12 @@ export const Slide2 = ({ ref, isActive }: Slide2Props) => {
           Риски и последствия
           <br />
           при отсутствии FE-разработчика
-          <br />
-          <br />
-          Олег Шилов
-          <br />
-          Ноябрь 2025
+
+          <div className={styles.Subtext}>
+            Олег Шилов
+            <br />
+            Ноябрь 2025
+          </div>
         </Text>
       </div>
 

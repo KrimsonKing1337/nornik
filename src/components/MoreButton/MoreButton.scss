@@ -1,13 +1,11 @@
 .Wrapper {
-  font-size: 48px;
+  font-size: 42px;
   color: #fff;
   background: #3C8DF3;
   padding: 10px;
   border: 4px #fff solid;
   border-radius: 10px;
-  transition: left 1s ease-in-out,
-  border-color 0.5s ease-in-out,
-  background-color 0.5s ease-in-out;
+  transition: border-color 0.5s ease-in-out, background-color 0.5s ease-in-out;
   cursor: pointer;
 
   &:hover {

@@ -32,12 +32,12 @@
   }
 }
 
-.MoreDetails,
-.AboutDesign {
+.MoreDetails {
   position: absolute;
   z-index: 3;
   top: -100vh;
   right: 50px;
+  transition: top 1s ease-in-out;
 
   &.isActive {
     top: 50px;
@@ -45,13 +45,13 @@
 }
 
 .AboutDesign {
-  top: unset;
-  right: unset;
+  position: absolute;
+  z-index: 3;
   bottom: -100vh;
   left: 50px;
+  transition: bottom 1s ease-in-out;
 
   &.isActive {
-    top: unset;
     bottom: 50px;
   }
 }
@@ -67,8 +67,8 @@
   align-items: flex-start;
   justify-content: center;
   font-size: 24px;
-  padding: 50px;
-  width: 50%;
+  padding: 80px;
+  width: 54%;
   color: #fff;
 }
 
@@ -92,5 +92,5 @@
 .ModalContentSubTitle {
   font-size: 36px;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 30px;
 }

@@ -1,8 +1,10 @@
 .Wrapper {
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(128deg, #3a85ff, #3a85ff);
+  overflow: hidden;
 }
 
 .Logo {

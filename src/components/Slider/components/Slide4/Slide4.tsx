@@ -119,9 +119,11 @@ export const Slide4 = ({ ref, isActive }: Slide4Props) => {
         </div>
       </Modal>
 
-      <MoreButton className={calculationsClassNames} onClick={() => setModalIsActive(true)}>
-        Подробнее
-      </MoreButton>
+      <div className={calculationsClassNames} onClick={() => setModalIsActive(true)}>
+        <MoreButton>
+          Подробнее
+        </MoreButton>
+      </div>
 
       <Content>
         <Title className={titleClassNames}>

@@ -106,7 +106,7 @@ export default (env = {}, argv) => {
       liveReload: true,
     },
     output: {
-      publicPath: '/',
+      publicPath: './',
       path: buildDir,
       filename: '[name].[contenthash].js',
       clean: true,

@@ -56,8 +56,8 @@
   margin-right: 15px;
   margin-left: auto;
   float: right;
-  height: 36px;
-  width: 36px;
+  height: clamp(26px, 3.33vmin, 48px); // 36
+  width: clamp(26px, 3.33vmin, 48px); // 36
   opacity: 0.8;
   cursor: pointer;
   transition: transform 0.5s ease-in-out;

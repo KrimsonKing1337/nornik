@@ -1,5 +1,6 @@
+@use 'styles/__mixins' as mixins;
+
 .Wrapper {
-  font-size: 42px;
   color: #fff;
   background: #3C8DF3;
   padding: 10px;
@@ -7,6 +8,7 @@
   border-radius: 10px;
   transition: border-color 0.5s ease-in-out, background-color 0.5s ease-in-out;
   cursor: pointer;
+  @include mixins.font-48;
 
   &:hover {
     border-color: #3C8DF3;

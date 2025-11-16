@@ -1,4 +1,6 @@
+@use 'styles/__mixins' as mixins;
+
 .Wrapper {
-  font-size: 36px;
   line-height: 1.4;
+  @include mixins.font-36;
 }

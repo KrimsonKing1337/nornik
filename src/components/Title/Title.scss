@@ -1,3 +1,5 @@
+@use 'styles/__mixins' as mixins;
+
 .Wrapper {
-  font-size: 64px;
+  @include mixins.font-64;
 }

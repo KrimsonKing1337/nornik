@@ -1,4 +1,5 @@
 import webpack from 'webpack';
+
 const { DefinePlugin } = webpack;
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -61,6 +62,9 @@ export default (env = {}, argv) => {
           loader: 'sass-loader',
           options: {
             api: 'modern',
+            sassOptions: {
+              loadPaths: [path.resolve(__dirname, 'src')],
+            },
           },
         },
       ],

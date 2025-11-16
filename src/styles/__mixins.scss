@@ -1,0 +1,15 @@
+@mixin font-64 {
+  font-size: clamp(40px, 5.9vmin, 80px);
+}
+
+@mixin font-48 {
+  font-size: clamp(32px, 4.44vmin, 64px);
+}
+
+@mixin font-36 {
+  font-size: clamp(26px, 3.33vmin, 48px);
+}
+
+@mixin font-24 {
+  font-size: clamp(20px, 2.22vmin, 32px);
+}

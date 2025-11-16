@@ -5,8 +5,8 @@
   left: 0;
   right: 0;
   margin: auto;
-  width: 48px;
-  height: 48px;
+  width: clamp(32px, 4.44vmin, 64px); // 48
+  height: clamp(32px, 4.44vmin, 64px); // 48
   opacity: 0.8;
   transform: rotate(90deg);
   transition: bottom 0.3s ease-in-out;

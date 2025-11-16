@@ -46,9 +46,9 @@ export const Modal = ({
           <img src={crossIcon} alt="" />
         </div>
 
-        <>
+        <div className={styles.Content}>
           {children}
-        </>
+        </div>
       </div>
     </div>,
     document.body,

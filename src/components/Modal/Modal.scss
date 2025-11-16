@@ -21,7 +21,7 @@
   left: 50%;
   width: 90%;
   height: 90%;
-  overflow: auto;
+  overflow: hidden;
   overscroll-behavior: none;
   backdrop-filter: blur(14px);
   background: rgba(#111, 0.25);
@@ -30,21 +30,30 @@
   transition: opacity 0.4s ease-in-out;
   cursor: auto;
 
+  &.isActive {
+    opacity: 1;
+  }
+}
+
+.Content {
+  position: relative;
+  top: clamp(-26px, -3.33vmin, -48px); // 36
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overscroll-behavior: none;
+
   &::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 8px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #fff;
+    background: rgba(#fff, 0.8);
+    border-radius: 8px;
   }
 
   &::-webkit-scrollbar-track {
     background-color: transparent;
-  }
-
-  &.isActive {
-    opacity: 1;
   }
 }
 

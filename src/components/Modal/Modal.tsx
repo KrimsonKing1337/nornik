@@ -1,4 +1,4 @@
-import { type PropsWithChildren } from 'react';
+import { type PropsWithChildren, useEffect } from 'react';
 
 import { createPortal } from 'react-dom';
 
@@ -20,6 +20,22 @@ export const Modal = ({
   setIsActive = () => {},
   className = '',
 }: ModalProps) => {
+  useEffect(() => {
+    const escapeKeyDownHandler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsActive(false);
+
+        document.removeEventListener('keydown', escapeKeyDownHandler);
+      }
+    };
+
+    if (isActive) {
+      document.addEventListener('keydown', escapeKeyDownHandler);
+    } else {
+      document.removeEventListener('keydown', escapeKeyDownHandler);
+    }
+  }, [isActive]);
+
   const contentClickHandler = (e: React.MouseEvent) => {
     e.stopPropagation();
   };

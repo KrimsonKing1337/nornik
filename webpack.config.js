@@ -85,7 +85,7 @@ export default (env = {}, argv) => {
       use: ['url-loader?limit=100000'],
     },
     {
-      test: /\.(glb|gltf|svg|ttf|jpg|png)$/,
+      test: /\.(glb|gltf|svg|ttf|jpg|png|hdr)$/,
       type: 'asset/resource',
     },
   ];

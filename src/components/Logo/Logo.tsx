@@ -7,6 +7,7 @@ import { OrbitControls, Environment, useGLTF } from '@react-three/drei';
 import classNames from 'classnames';
 
 import LogoModel from 'assets/logo.glb';
+import EnvSunset from 'assets/venice_sunset_1k.hdr';
 
 import styles from './Logo.scss';
 
@@ -58,7 +59,7 @@ export const Logo = ({ className = '' }: LogoProps) => {
       <Canvas camera={{ position: [0, 1, 3] }}>
         <ambientLight intensity={0.6} />
 
-        <Environment preset="sunset" />
+        <Environment files={EnvSunset} />
         <Model />
         <OrbitControls enableZoom={false} />
       </Canvas>
